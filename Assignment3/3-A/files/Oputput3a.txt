@@ -1,0 +1,7 @@
+Name     -  Darshan Gohad
+Roll No. -  33232
+Batch    -  L-10
+
+
+This is Assignment 3-A of WADL TE IT
+Created a static web server to display all file in directory and display its content.

@@ -1,0 +1,23 @@
+<!-- file.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Content</title>
+</head>
+<body>
+    <h1>File Content</h1>
+    <pre id="fileContent"></pre>
+    
+    <script>
+        const filename = window.location.pathname.split('/').pop();
+        fetch(`/file/${filename}`)
+            .then(response => response.text())
+            .then(content => {
+                document.getElementById('fileContent').textContent = content;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
